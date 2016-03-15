@@ -1,3 +1,12 @@
 .body {
   background-color: #19A6FF;
+  display: block;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+p {
+  font-family: 'Arimo', sans-serif;
 }
