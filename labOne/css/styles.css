@@ -1,12 +1,13 @@
 .body {
   background-color: #19A6FF;
   display: block;
-  width: 600px;
+  width: 500px;
   margin: 0 auto;
+  padding: 25px;
 }
 .questions {
   font-family: 'Arimo', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h1 {
