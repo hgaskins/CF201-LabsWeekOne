@@ -8,6 +8,10 @@ by the id i placed within the html to then add in a textContent
 method by the one variable declared.
 */
 
+function findId() {
+  document.getElementById();
+}
+
 var userName = prompt("Hello! What is your name?");
 console.log("This user's name is " + userName);
 var one = document.getElementById("tagName");
@@ -48,3 +52,5 @@ if (userResponseTwo.toLowerCase() === "hockey" || userResponseTwo.toLowerCase() 
   console.log("the user's response was " + userResponseTwo + " which is incorrect");
   three.textContent = "That is a fun sport, but nope I didn't play it!";
 }
+
+var theEnd = alert("thanks for playing!");
