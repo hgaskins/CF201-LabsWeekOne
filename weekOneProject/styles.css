@@ -10,7 +10,7 @@ body {
   background-color: #999999;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, li {
   color: #4C4C4C;
 }
 .banner {
@@ -46,4 +46,20 @@ p {
   font-size: 1em;
   font-weight: 700;
   padding-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+li {
+  font-family: 'Domine', serif;
+  font-size: 1em;
+  font-weight: 400;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
