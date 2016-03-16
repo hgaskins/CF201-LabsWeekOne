@@ -9,9 +9,9 @@ method by the one variable declared.
 */
 
 /* function to return document method "getElementById" in DRY*/
-// function findId(id) {
-//   return document.getElementById(id);
-// }
+function findId(id) {
+  return document.getElementById(id);
+}
 
 var userName = prompt("Hello! What is your name?");
 console.log("This user's name is " + userName);
