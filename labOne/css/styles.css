@@ -1,12 +1,24 @@
 .body {
   background-color: #19A6FF;
   display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 25px;
+}
+.questions {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
 }
 
 h1 {
   font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  text-align: center;
+  background-color: #0C537F;
+  color: #ccc;
 }
 
 p {
   font-family: 'Arimo', sans-serif;
+  font-size: 1.1em;
 }
