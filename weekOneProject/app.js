@@ -8,6 +8,9 @@ by the id i placed within the html to then add in a textContent
 method by the one variable declared.
 */
 
+// score counter for printing how many answers the user got correct at end of page
+var score = 0;
+
 /* function to return document method "getElementById" in DRY*/
 function findId(id) {
   return document.getElementById(id);
@@ -32,9 +35,10 @@ var two = findId("tagResponse", userResponseOne);
 if(userResponseOne.toLowerCase() === "n" || userResponseOne.toLowerCase() === "no") {
   alert("Correct! Minnesota is where I was born :)");
   console.log("the user said No, which is correct");
-  two.textContent ="So right you are!";
+  two.textContent ="So right you are! I was born in Minnesota, but went to school in Wisconsin";
+  score++;
 } else if (userResponseOne.toLowerCase() === "y" || userResponseOne.toLowerCase() === "yes") {
-  alert("Oh hell no!");
+  alert("Oh hell no! I was born in Minnesota, but went to school in Wisconsin");
   console.log("the user said yes, which is incorrect. I was not born in Wisconsin");
   two.textContent = "Oh ya think so?"
 } else {
@@ -53,13 +57,14 @@ for (i = 0; i < sports.length; i++) {
   console.log(sports[i]);
   //check if answer user gives is anything in Sports array
   if (userResponseTwo === sports[i]) {
+    score++;
     console.log("user answered sports guessing game correcly!");
-    three.textContent = "You got it right!";
+    three.textContent = "You got it right! I did play " + userResponseTwo + " growing up";
     alert("Correct!");
     break;
   } else if (i === sports.length - 1) {
     console.log("user was wrong with sports guessing game");
-    three.textContent = "Wrong, wrong, so wrong!";
+    three.textContent = "Wrong, wrong, so wrong! I never played " + userResponseTwo;
     alert("WRONG!");
   }
 }
@@ -72,9 +77,10 @@ console.log("The user's response is " + userResponseThree);
 var four = document.getElementById("tagChile");
 
 if (userResponseThree.toLowerCase() === "y" || userResponseThree.toLowerCase() === "yes") {
+  score++;
   alert("correct");
   console.log("The user answered correctly");
-  four.textContent = "Nicely done!"
+  four.textContent = "Nicely done! I did live in Chile. Thanks for reading :)"
 } else {
   alert("Come on! Go read my bio - it's really short I promise :)");
   console.log("the user answered incorrectly and doesn't pay attentin or thinks my life story is boring");
@@ -87,8 +93,9 @@ console.log("The user said " + userResponseFour);
 var five = document.getElementById("tagMusic");
 
 if (userResponseFour.toLowerCase() === "y" || userResponseFour.toLowerCase() === "yes" || userResponseFour.toLowerCase() == "ya") {
-  alert("yes! you are correct :)");
-  console.log("The user answered incorrectly");
+  score++;
+  alert("yes! you are correct I play piano and guitar :)");
+  console.log("The user answered correctly");
   five.textContent = "You know so much about me already. Kinda creepo!"
 } else {
   alert("I do play an instrument! Two in fact ");
@@ -109,7 +116,8 @@ while (counter < 5) {
   //interpret response
   if (userGuess === 28) {
     //if they get it right
-    six.textContent = "CORRECT!";
+    score++;
+    six.textContent = "CORRECT! I am 28!";
     console.log("the user got my age correct!");
     counter = 5;
     break;
@@ -125,11 +133,13 @@ while (counter < 5) {
     counter++;
   } else {
     //if NaN etc
-    six.textContent = "Enter a number of god's sake!!";
+    six.textContent = "Enter a number!";
     counter++;
   }
 }
 
+var seven = document.getElementById('tagScore');
+seven.textContent = "Thanks for playing! You got " + score + " out of 5 questions"
 
 
 var theEnd = alert("thanks for playing!");
