@@ -5,21 +5,25 @@
 }
 
 body {
-  width: 50%;
-  margin: 0 auto;
-  background-color: #999999;
+  background-color: #929CB3;
 }
 
-h1, h2, h3, p, li {
-  color: #4C4C4C;
+.page {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h2, h3, p, li {
+  color: #1B2334;
 }
 .banner {
-  background-color: #333333;
+  background-color: #1B2334;
   padding-bottom: 20px;
 }
 h1 {
+  color: #ccc;
   font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
+  font-size: 4.5em;
   font-weight: 700;
   text-align: center;
   margin: auto;
@@ -28,17 +32,19 @@ h1 {
 }
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: 400;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top:60px;
 }
 
+/* h3 used for the bio paragraph */
 h3 {
   font-family: 'Domine', serif;
   font-size: 1.05em;
   font-weight: 400;
   padding-bottom: 20px;
+  line-height: 2;
 }
 
 p {
@@ -48,6 +54,7 @@ p {
   padding-bottom: 10px;
 }
 
+/* list styles*/
 ul {
   padding-left: 20px;
 }
