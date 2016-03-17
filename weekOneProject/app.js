@@ -42,22 +42,29 @@ if(userResponseOne.toLowerCase() === "n" || userResponseOne.toLowerCase() === "n
   console.log("the user input was neither yes or no");
 }
 
-/* the second question to the user with prompt to user, logs the user response to the console, and then provides a conditional response based on what the user responded with */
+/* the second question to the user with prompt to user about which sport I have played. This also was amended to apply to the lab condition that accepts multiple possible correct answers that are stored in an array*/
 
 var userResponseTwo = prompt("What sport did I play growing up?");
-console.log("The user's response is " + userResponseTwo);
-//use findId function here
-var three = document.getElementById('tagSport');
+var sports = ["hockey", "soccer", "tennis", "lacross"];
+var three = document.getElementById('tagSport')
 
-if (userResponseTwo.toLowerCase() === "hockey" || userResponseTwo.toLowerCase() === "soccer" || userResponseTwo.toLowerCase() === "tennis") {
-  alert("correct!");
-  console.log("the user said " + userResponseTwo + " which is correct!");
-  three.textContent = "You pay attention! ";
-} else {
-  alert("Nah I never played that!");
-  console.log("the user's response was " + userResponseTwo + " which is incorrect");
-  three.textContent = "That is a fun sport, but nope I didn't play it!";
+for (i = 0; i < sports.length; i++) {
+  //debugging purposes
+  console.log(sports[i]);
+  //check if answer user gives is anything in Sports array
+  if (userResponseTwo === sports[i]) {
+    console.log("user answered sports guessing game correcly!");
+    three.textContent = "You got it right!";
+    alert("Correct!");
+    break;
+  } else if (i === sports.length - 1) {
+    console.log("user was wrong with sports guessing game");
+    three.textContent = "Wrong, wrong, so wrong!";
+    alert("WRONG!");
+  }
 }
+
+// the third question which is yes or no about living in Chile.
 
 var userResponseThree = prompt("Did I ever live in Chile?");
 console.log("The user's response is " + userResponseThree);
