@@ -89,4 +89,40 @@ if (userResponseFour.toLowerCase() === "y" || userResponseFour.toLowerCase() ===
   five.textContent = "You are a lost cause my friend.";
 }
 
+//5th question --> with numeric input and has too high too low with 4 opportunities to answered
+
+
+var six = document.getElementById("tagNumberGame");
+var age = 28;
+
+var counter = 0;
+while (counter < 5) {
+  //ask q
+  var userGuess = parseInt(prompt("How old am I? take a guess :)"));
+  //interpret response
+  if (userGuess === 28) {
+    //if they get it right
+    six.textContent = "CORRECT!";
+    console.log("the user got my age correct!");
+    counter = 5;
+    break;
+  } else if (userGuess > 28) {
+    //if too high
+    six.textContent = "Come on. Too high!";
+    console.log("the user guess is too high");
+    counter++;
+  } else if (userGuess < 28) {
+    //if too low
+    six.textContent = "Too Low!";
+    console.log("the user guess is too low");
+    counter++;
+  } else {
+    //if NaN etc
+    six.textContent = "Enter a number of god's sake!!";
+    counter++;
+  }
+}
+
+
+
 var theEnd = alert("thanks for playing!");
