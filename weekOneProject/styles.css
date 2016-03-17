@@ -6,11 +6,13 @@
 
 body {
   background-color: #929CB3;
+  display: block;
 }
 
 .page {
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 h2, h3, p, li {
