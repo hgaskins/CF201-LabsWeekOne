@@ -1,9 +1,10 @@
+/* universal reset */
 * {
  margin: 0;
  padding: 0;
  box-sizing: border-box;
 }
-
+/*  */
 body {
   background-color: #929CB3;
   display: block;
@@ -20,10 +21,12 @@ nav {
 
 nav a {
   margin: 0 20px 0 20px;
+  color: #1B2234;
+  text-decoration: none;
 }
 
 nav a:hover {
-
+  color: #686F80;
 }
 
 .page {
