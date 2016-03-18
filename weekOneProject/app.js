@@ -11,26 +11,33 @@ method by the one variable declared.
 // score counter for printing how many answers the user got correct at end of page
 var score = 0;
 
-/* function to return document method "getElementById" in DRY*/
-function findId(id) {
-  return document.getElementById(id);
+/* function created with pair programming */
+
+var htmlId          = ['questionOne', 'questionTwo', 'questionThree'];
+var htmlResponseId  = ['responseOne', 'responseTwo', 'responseThree'];
+var question        = ['what is your name?', 'where did you grow up?', 'are you ready to know this shit?'];
+var response        = [' , welcome!', ' sounds cool.', '? Me too!'];
+
+function ask(htmlId, htmlResponseId, questionText, responseText) {
+  var askQ = prompt(questionText);
+  console.log("answer is " + askQ);
+  var questionTag = document.getElementById(htmlId);
+  var responseTag = document.getElementById(htmlResponseId);
+  questionTag.textContent = questionText;
+  responseTag.textContent = askQ + responseText;
 }
 
-var userName = prompt("Hello! What is your name?");
-console.log("This user's name is " + userName);
-//use findId function here
-var one = document.getElementById("tagName");
-findId("tagName");
-one.textContent = "Hey there " + userName + "!";
+for (i = 0; i < 3; i++) {
+  ask(htmlId[i], htmlResponseId[i], question[i], response[i]);
+}
 
-alert("Hey there " + userName + " let's play a narcissistic game about ME! Go ahead and click OK there :)" );
 
 /* the first question to the user with prompt to user, logs the user response to the console, and then provides a conditional response based on what the user responded with */
 var userResponseOne = prompt("Was I born in Wisconsin?");
 console.log("The user's respons is " + userResponseOne);
 //use findId function here
 var two = document.getElementById("tagResponse");
-var two = findId("tagResponse", userResponseOne);
+
 
 if(userResponseOne.toLowerCase() === "n" || userResponseOne.toLowerCase() === "no") {
   alert("Correct! Minnesota is where I was born :)");
