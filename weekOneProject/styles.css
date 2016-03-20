@@ -14,7 +14,8 @@ body {
 /* Navigation Styles */
 
 nav {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: "brandon-grotesque", Helvetica, sans-serif;
+  /*font-family: 'Montserrat', Helvetica, Arial, sans-serif;*/
   font-size: 1.5em;
   text-align: center;
   margin: 20px 20px;
@@ -45,7 +46,8 @@ h2, h3, p, li {
 }
 h1 {
   color: #ccc;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: "brandon-grotesque", Helvetica, sans-serif;
+  /*font-family: 'Montserrat', Helvetica, Arial, sans-serif;*/
   font-size: 4.5em;
   font-weight: 700;
   text-align: center;
@@ -54,7 +56,8 @@ h1 {
   padding-bottom: 20px;
 }
 h2 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: "brandon-grotesque", Helvetica, sans-serif;
+  /*font-family: 'Montserrat', Helvetica, Arial, sans-serif;*/
   font-size: 1.75em;
   font-weight: 400;
   padding-bottom: 20px;
